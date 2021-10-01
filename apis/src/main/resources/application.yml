@@ -1,0 +1,8 @@
+mongodb.uri: mongodb://root:example@${MONGODB_HOST}:27017
+mongodb.databasename: techplayground
+postgresdb.uri:  jdbc:postgresql://${POSTGRESDB_HOST}:5432/techplayground?user=postgres&password=postgres
+management:
+  metrics:
+    mongo:
+      connectionpool:
+        enabled: false
