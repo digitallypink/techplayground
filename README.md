@@ -38,6 +38,7 @@ what you choose. So for example you can perform analysis on the csv, you can try
 
 ### Databases
 #### Postgres RDBMS 
+Postgres UI can be found in localhost:3001
 Good tips on how to connect to postgres [here](https://www.postgresqltutorial.com/postgresql-python/connect/)
 
 **Connection Parameters**
