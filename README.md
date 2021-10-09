@@ -13,7 +13,7 @@ Each Course has a name, a category and a price
 The course categories for this playground are:
 - Business
 - Hobbies
-- IT
+- Information Technology
 
 There are a variety of ways to access the data. From REST endpoint to a database. The data would be the same no matter 
 what you choose. So for example you can perform analysis on the csv, you can try the same analysis from the database just to make sure you are getting the same result.
