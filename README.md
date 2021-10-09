@@ -43,7 +43,7 @@ Good tips on how to connect to postgres [here](https://www.postgresqltutorial.co
 **Connection Parameters**
 
     host=localhost
-    port=5432
+    port=5111
     database=techplayground
     user=postgres
     password=postgres
