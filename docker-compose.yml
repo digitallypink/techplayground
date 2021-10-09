@@ -27,22 +27,27 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5111:5432"
+
   sqlpad:
     image: sqlpad/sqlpad:5.5
-    depends_on: postgres
+    depends_on:
+     - postgres
     environment:
       SQLPAD_AUTH_DISABLED: "true"
       SQLPAD_AUTH_DISABLED_DEFAULT_ROLE: "admin"
       SQLPAD_APP_LOG_LEVEL: debug
       SQLPAD_WEB_LOG_LEVEL: warn
-      SQLPAD_CONNECTIONS__psql__name: psql
-      SQLPAD_CONNECTIONS__psql__driver: postgres
-      SQLPAD_CONNECTIONS__psql__host: postgres
-      SQLPAD_CONNECTIONS__psql__username: postgres
-      SQLPAD_CONNECTIONS__psql__multiStatementTransactionEnabled: "true"
-      SQLPAD_CONNECTIONS__psql__idleTimeoutSeconds: 86400
+      SQLPAD_CONNECTIONS__techplayground__name: techplayground
+      SQLPAD_CONNECTIONS__techplayground__driver: postgres
+      SQLPAD_CONNECTIONS__techplayground__host: postgres
+      SQLPAD_CONNECTIONS__techplayground__username: postgres
+      SQLPAD_CONNECTIONS__techplayground__database: techplayground
+      SQLPAD_CONNECTIONS__techplayground__password: postgres
+      SQLPAD_CONNECTIONS__techplayground__multiStatementTransactionEnabled: "true"
+      SQLPAD_CONNECTIONS__techplayground__idleTimeoutSeconds: 86400
     ports:
-      - "3001:3000"
+      - "3010:3000"
+
   apis:
     build: ./apis
     depends_on:
