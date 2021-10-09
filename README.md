@@ -90,6 +90,24 @@ SQL query: `select mc.id, m."name" as member_name, m.age as member_age, c.title 
 |f6e0736c-dd78-45e1-87e2-367538a3742a|Muoi Runte|53|The Moving Toyshop|hobbies|313.98030200388564|
 |dc20d30a-c1bc-4c77-afa2-c5db43e4b503|Arthur Schulist V|20|Endless Night|information_technology|881.3140564668872|
 
+
+**Sample more complex query to get insights**
+
+SQL query: `select m."name", a.number_of_courses, a.total_spend from (select mc.member_id, count(*) as number_of_courses, sum(c2.price) as total_spend
+from members_courses mc
+join courses c2 on c2.id = mc.course_id
+group by mc.member_id) a join members m on m.id = a.member_id
+limit 5;`
+
+|name|number_of_courses|total_spend|
+|----|-----------------|-----------|
+|Clemente Bernier|5|3363.143355430321|
+|Roosevelt Casper|2|1539.019961271993|
+|Carie Durgan|2|759.0|
+|Shaneka Tromp|8|6476.51|
+|Alva Crooks|3|2348.88|
+
+
 #### Mongo NoSql DB
 **Connection Parameters**
 You can simply use mongodb://root:example@localhost:27017 to connect from you python script
