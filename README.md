@@ -1,9 +1,10 @@
 # TECH PLAYGROUND
 
 ## Summary
-This project is aimed at creating sample technologies for use to learn and upskill.
-This is a learning annex. There are members and there are courses and there are course categories.
-Note all data available has been generated. No 2 instances will have exactly the same data.
+The aim of this project is to create access technologies for learning and upskilling.
+
+This Tech playground is simulating an Adult Community Learning center. There are members and there are courses.
+Note all the data available will be generated on startup. No 2 instances will have exactly the same data.
 
 ### Members
 Each member has a name, age, isTrouble maker and courses they have registered for.
